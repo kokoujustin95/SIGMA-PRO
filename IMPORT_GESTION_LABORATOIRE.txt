@@ -1,0 +1,19 @@
+GS SIGMA — Module Gestion de laboratoire
+
+Fonctionnalités ajoutées :
+- Répertoire des laboratoires : nom, code, bâtiment/salle, responsable, capacité, état et observations.
+- Inventaire des équipements : affectation à un laboratoire, quantité, état, référence, date de contrôle et notes de maintenance.
+- Réservations, TP, activités et maintenance : date, heure, classe/groupe, responsable, description et état.
+- Indicateurs de suivi et export CSV.
+- Sauvegarde locale immédiate et synchronisation avec la base partagée si le serveur Render/PostgreSQL est accessible.
+
+Les actions de création et de suppression sont réservées à l'administrateur. Après remplacement des fichiers du projet, redéployer le service sur Render puis recharger le site avec Ctrl+F5.
+
+MISE À JOUR — ÉTIQUETTES QR ET SUIVI DES STOCKS
+- L’inventaire permet désormais d’enregistrer l’unité, la quantité initiale, la date d’approvisionnement, le fournisseur, le numéro de lot, la date de péremption, le seuil d’alerte, le pictogramme et les notes de sécurité.
+- Chaque produit possède un identifiant QR stable. L’étiquette imprimée contient un lien vers la fiche du produit dans l’application. Pour ouvrir la fiche sur un autre téléphone, le site doit être hébergé sur une adresse HTTPS accessible et les données doivent être synchronisées.
+- Les sorties (quantités utilisées) et les réapprovisionnements sont historisés. Le stock restant est recalculé et une alerte visuelle signale les stocks bas et les produits périmés.
+- Les étiquettes peuvent être téléchargées en PDF, individuellement ou en série (planche A4). Le formulaire accepte aussi l’import d’un pictogramme personnalisé au format JPEG (.jpg/.jpeg), intégré à l’étiquette PDF. Les QR codes et PDF utilisent les bibliothèques CDN déjà chargées ; une connexion Internet est donc nécessaire.
+- Les mouvements de stock et les champs de suivi sont également inclus dans l’export CSV.
+
+- Dans Comptes utilisateurs, l’administrateur peut activer ou désactiver l’accès au module de laboratoire pour chaque compte simple. Les administrateurs conservent l’accès. Les suppressions restent réservées à l’administrateur.

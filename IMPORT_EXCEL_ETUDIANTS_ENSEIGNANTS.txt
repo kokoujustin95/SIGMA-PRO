@@ -1,0 +1,15 @@
+IMPORTATION DES ÉTUDIANTS ET ENSEIGNANTS
+
+Les pages « Liste des étudiants » et « Liste des enseignants » disposent chacune d'un bouton « Importer Excel ».
+
+Formats acceptés par le lecteur de classeur intégré (SheetJS) :
+.xlsx, .xls, .xlsm, .xlsb, .xltx, .xltm, .xlam, .xla, .ods, .csv, .tsv et .xml.
+
+Structure recommandée du premier onglet :
+Nom complet | Classe | Contact | Code QR
+
+Pour les étudiants, le nom et la classe sont obligatoires. Si le code QR est vide, il est généré automatiquement.
+Pour les enseignants, le nom est obligatoire ; la classe ou le service peut contenir plusieurs classes séparées par une virgule.
+Les fiches déjà existantes sont mises à jour lorsqu'un code QR correspond, ou lorsque le nom correspond dans la même catégorie. Les autres catégories ne sont pas modifiées.
+
+Les fichiers PDF/XPS ne sont pas des classeurs Excel et ne sont pas importables par ces boutons. Convertissez-les d'abord en XLSX ou CSV.
